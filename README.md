@@ -1,6 +1,6 @@
-# Blog personal — Cundalf
+# Blog personal — Seedbyte Dev
 
-Repositorio con el código fuente de mi blog personal, generado con Hugo. Aquí están las plantillas, el contenido y la configuración.
+Repositorio con el código fuente de mi blog personal, generado con Hugo. Aquí están las plantillas, el contenido y la configuración de Seedbyte Dev.
 
 Qué contiene
 - Código fuente del sitio (contenido en `content/`, layouts, partials, etc.).
@@ -32,3 +32,4 @@ Atribución y contenido
 Notas adicionales
 
 - Devcontainer: mantengo `.devcontainer/` por mi servidor personal. Si abrís el proyecto en Codespaces o VS Code con Remote Containers, se activará el entorno.
+- `estilo.md`: Como a veces en un ratito que tengo descargo un monton de ideas o tanto iterar hace que la version final este "desalineada" es por el cual esta este archivo, donde cualquier asistente me puede dar una mano. Puede molestar a algunos esta ayuda de IA, soy transparente y no te obligo a leer el blog.
