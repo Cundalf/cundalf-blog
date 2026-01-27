@@ -1,6 +1,6 @@
-# Blog personal — Cundalf
+# Blog personal — Seedbyte Dev
 
-Repositorio con el código fuente de mi blog personal, generado con Hugo. Aquí están las plantillas, el contenido y la configuración.
+Repositorio con el código fuente de mi blog personal, generado con Hugo. Aquí están las plantillas, el contenido y la configuración de Seedbyte Dev.
 
 Qué contiene
 - Código fuente del sitio (contenido en `content/`, layouts, partials, etc.).

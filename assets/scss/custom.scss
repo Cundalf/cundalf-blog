@@ -1,3 +1,15 @@
 /*
     You can add your own custom styles here.
 */
+
+:root {
+    --accent-color: #1f6b2e;
+    --accent-color-darker: #154f22;
+    --accent-color-text: #f5fff0;
+}
+
+:root[data-scheme="dark"] {
+    --accent-color: #c7f26b;
+    --accent-color-darker: #8ad84a;
+    --accent-color-text: #0b1f0f;
+}
