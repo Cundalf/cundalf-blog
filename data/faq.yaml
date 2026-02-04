@@ -1,0 +1,19 @@
+items:
+  - question:
+      es: ¿Cómo reservo una comisión?
+      en: How do I book a commission?
+    answer:
+      es: Elegí el tipo de comisión, reuní referencias y escribime por alguno de los links externos.
+      en: Choose a commission type, gather references, and message me through one of the external links.
+  - question:
+      es: ¿Cuánto tiempo tarda?
+      en: How long does it take?
+    answer:
+      es: Depende de la complejidad. En promedio entre 7 y 15 días hábiles.
+      en: It depends on complexity. On average between 7 and 15 business days.
+  - question:
+      es: ¿Puedo pedir cambios?
+      en: Can I request changes?
+    answer:
+      es: Sí, cada plan incluye rondas de cambios leves según lo indicado.
+      en: Yes, each plan includes rounds of light revisions as stated.

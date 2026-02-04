@@ -1,0 +1,22 @@
+items:
+  - image: images/portfolio-illustrations.svg
+    title:
+      es: Ilustraciones narrativas
+      en: Narrative illustrations
+    description:
+      es: Personajes, escenas y universos con paletas suaves y brillo artesanal.
+      en: Characters, scenes, and universes with soft palettes and handcrafted glow.
+  - image: images/portfolio-vtuber.svg
+    title:
+      es: Diseño para VTubers
+      en: VTuber design
+    description:
+      es: Concept art, model sheets y expresiones listas para animación.
+      en: Concept art, model sheets, and expressions ready for animation.
+  - image: images/portfolio-editorial.svg
+    title:
+      es: Editorial & covers
+      en: Editorial & covers
+    description:
+      es: Portadas, posters y piezas editoriales con identidad delicada.
+      en: Covers, posters, and editorial pieces with a delicate identity.

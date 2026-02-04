@@ -1,0 +1,42 @@
+site_title = "Artistic portfolio"
+site_description = "Modern and delicate artistic portfolio with commissions, terms, and external links."
+site_logo = "Aurora Atelier"
+nav_toggle = "Open navigation"
+nav_home = "Home"
+nav_faq = "FAQ"
+nav_portfolio = "Portfolio"
+nav_commissions = "Commissions"
+nav_terms = "Terms of Service"
+nav_contact = "Contact"
+language_selector = "Language selector"
+
+hero_eyebrow = "Artistic portfolio"
+hero_title = "Soft, narrative illustrations full of glow"
+hero_lead = "I am an independent artist focused on magical characters, dreamy atmospheres, and VTuber design. Each piece is crafted with care, detail, and close communication."
+hero_cta_primary = "View portfolio"
+hero_cta_secondary = "Commissions open"
+hero_image_alt = "Portfolio preview"
+hero_card_title = "Availability"
+hero_card_text = "Schedule open for limited seasonal commissions."
+hero_tag_1 = "Illustration"
+hero_tag_2 = "Concept art"
+hero_tag_3 = "VTubers"
+
+portfolio_title = "Portfolio"
+portfolio_intro = "A selection of recent work. Replace these images with your own pieces."
+
+commissions_title = "Commissions"
+commissions_intro = "Flexible options for different levels of detail. All prices are indicative and can be adjusted to your brief."
+commissions_notice = "Payments are handled through external platforms. Message me to confirm availability and timing."
+
+terms_title = "Terms of Service"
+terms_intro = "General conditions designed for clear and transparent work."
+
+faq_title = "FAQ"
+faq_intro = "Quick answers to frequent questions about the creative process."
+
+contact_title = "Contact"
+contact_intro = "No form here: use these links to chat directly and send your brief."
+contact_image_alt = "Contact illustration"
+
+footer_copy = "© 2024 Aurora Atelier. All rights reserved."

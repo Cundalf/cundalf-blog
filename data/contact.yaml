@@ -1,0 +1,13 @@
+links:
+  - url: https://example.com
+    label:
+      es: Enviar brief por Instagram
+      en: Send a brief via Instagram
+  - url: https://example.com
+    label:
+      es: Solicitar comisión en Ko-fi
+      en: Request a commission on Ko-fi
+  - url: https://example.com
+    label:
+      es: Ver portafolio completo en Behance
+      en: View full portfolio on Behance

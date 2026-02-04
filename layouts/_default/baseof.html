@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" data-base-url="{{ "/" | relURL }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ i18n "site_title" }}</title>
+    <meta name="description" content="{{ i18n "site_description" }}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Nunito:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}" />
+  </head>
+  <body>
+    <div class="background-glow" aria-hidden="true"></div>
+    <div
+      id="lang-data"
+      data-current="{{ .Site.Language.Lang }}"
+      data-default="{{ .Site.DefaultContentLanguage }}"
+      {{ range .Site.Home.AllTranslations }}
+      data-lang-{{ .Language.Lang }}="{{ .RelPermalink }}"
+      {{ end }}
+    ></div>
+    <header class="site-header" id="home">
+      <nav class="nav">
+        <a class="logo" href="{{ "/" | relLangURL }}">{{ i18n "site_logo" }}</a>
+        <button class="nav-toggle" aria-label="{{ i18n "nav_toggle" }}" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links">
+          <a href="#home">{{ i18n "nav_home" }}</a>
+          <a href="#faq">{{ i18n "nav_faq" }}</a>
+          <a href="#portfolio">{{ i18n "nav_portfolio" }}</a>
+          <a href="#commissions">{{ i18n "nav_commissions" }}</a>
+          <a href="#terms">{{ i18n "nav_terms" }}</a>
+          <a href="#contact">{{ i18n "nav_contact" }}</a>
+        </div>
+        <div class="lang-switcher" aria-label="{{ i18n "language_selector" }}">
+          {{ range .Site.Home.AllTranslations }}
+          <a
+            class="lang-switcher__link {{ if eq .Language.Lang $.Site.Language.Lang }}is-active{{ end }}"
+            data-lang="{{ .Language.Lang }}"
+            href="{{ .RelPermalink }}"
+            >{{ .Language.LanguageName }}</a
+          >
+          {{ end }}
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>{{ i18n "footer_copy" }}</p>
+        <div class="footer-links">
+          <a href="https://example.com" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://example.com" target="_blank" rel="noreferrer">Behance</a>
+          <a href="https://example.com" target="_blank" rel="noreferrer">Ko-fi</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ "js/main.js" | relURL }}"></script>
+  </body>
+</html>

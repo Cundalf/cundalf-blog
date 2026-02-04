@@ -1,0 +1,31 @@
+sections:
+  - title:
+      es: General
+      en: General
+    items:
+      - es: La reserva se confirma con el 50% del total.
+        en: Booking is confirmed with 50% upfront.
+      - es: No se aceptan pedidos con IA ni plagios.
+        en: AI-generated or plagiarized requests are not accepted.
+      - es: Se comparte avance para feedback en cada etapa.
+        en: Progress updates are shared at each stage.
+  - title:
+      es: Derechos de uso
+      en: Usage rights
+    items:
+      - es: Uso personal incluido en el precio base.
+        en: Personal use is included in the base price.
+      - es: Uso comercial requiere tarifa adicional.
+        en: Commercial use requires an additional fee.
+      - es: La artista puede mostrar el trabajo en su portafolio.
+        en: The artist can showcase the work in her portfolio.
+  - title:
+      es: Proceso de comisión
+      en: Commission process
+    items:
+      - es: Se confirma el brief antes de iniciar.
+        en: The brief is confirmed before starting.
+      - es: Cambios mayores se cotizan aparte.
+        en: Major changes are quoted separately.
+      - es: Entrega final en formato digital.
+        en: Final delivery in digital format.

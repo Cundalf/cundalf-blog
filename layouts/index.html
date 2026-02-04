@@ -1,0 +1,125 @@
+{{ define "main" }}
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">{{ i18n "hero_eyebrow" }}</p>
+      <h1>{{ i18n "hero_title" }}</h1>
+      <p class="lead">{{ i18n "hero_lead" }}</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#portfolio">{{ i18n "hero_cta_primary" }}</a>
+        <a class="button ghost" href="#commissions">{{ i18n "hero_cta_secondary" }}</a>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="{{ "images/hero-placeholder.svg" | relURL }}" alt="{{ i18n "hero_image_alt" }}" />
+      <div class="hero-card">
+        <h3>{{ i18n "hero_card_title" }}</h3>
+        <p>{{ i18n "hero_card_text" }}</p>
+        <div class="hero-card-tags">
+          <span>{{ i18n "hero_tag_1" }}</span>
+          <span>{{ i18n "hero_tag_2" }}</span>
+          <span>{{ i18n "hero_tag_3" }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="portfolio">
+    <div class="section-header">
+      <h2>{{ i18n "portfolio_title" }}</h2>
+      <p>{{ i18n "portfolio_intro" }}</p>
+    </div>
+    <div class="portfolio-grid">
+      {{ range site.Data.portfolio.items }}
+        <article class="portfolio-card">
+          <img src="{{ .image | relURL }}" alt="{{ index .title $.Site.Language.Lang }}" />
+          <div class="portfolio-card-body">
+            <h3>{{ index .title $.Site.Language.Lang }}</h3>
+            <p>{{ index .description $.Site.Language.Lang }}</p>
+          </div>
+        </article>
+      {{ end }}
+    </div>
+    <div class="gallery-grid">
+      {{ range site.Data.gallery.items }}
+        <div class="gallery-item">
+          <img src="{{ .image | relURL }}" alt="{{ index .label $.Site.Language.Lang }}" />
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="section split" id="commissions">
+    <div>
+      <h2>{{ i18n "commissions_title" }}</h2>
+      <p>{{ i18n "commissions_intro" }}</p>
+      <div class="notice">
+        <p>{{ i18n "commissions_notice" }}</p>
+      </div>
+    </div>
+    <div class="pricing-grid">
+      {{ range site.Data.commissions.tiers }}
+        <article class="price-card">
+          <h3>{{ index .title $.Site.Language.Lang }}</h3>
+          <p class="price">{{ .price }}</p>
+          <p>{{ index .description $.Site.Language.Lang }}</p>
+          <ul>
+            {{ range .details }}
+              <li>{{ index . $.Site.Language.Lang }}</li>
+            {{ end }}
+          </ul>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="section" id="terms">
+    <div class="section-header">
+      <h2>{{ i18n "terms_title" }}</h2>
+      <p>{{ i18n "terms_intro" }}</p>
+    </div>
+    <div class="terms-grid">
+      {{ range site.Data.terms.sections }}
+        <article class="terms-card">
+          <h3>{{ index .title $.Site.Language.Lang }}</h3>
+          <ul>
+            {{ range .items }}
+              <li>{{ index . $.Site.Language.Lang }}</li>
+            {{ end }}
+          </ul>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <div class="section-header">
+      <h2>{{ i18n "faq_title" }}</h2>
+      <p>{{ i18n "faq_intro" }}</p>
+    </div>
+    <div class="faq-list">
+      {{ range site.Data.faq.items }}
+        <details>
+          <summary>{{ index .question $.Site.Language.Lang }}</summary>
+          <p>{{ index .answer $.Site.Language.Lang }}</p>
+        </details>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="contact-card">
+      <div>
+        <h2>{{ i18n "contact_title" }}</h2>
+        <p>{{ i18n "contact_intro" }}</p>
+        <div class="contact-links">
+          {{ range site.Data.contact.links }}
+            <a href="{{ .url }}" target="_blank" rel="noreferrer">{{ index .label $.Site.Language.Lang }}</a>
+          {{ end }}
+        </div>
+      </div>
+      <div class="contact-image">
+        <img src="{{ "images/contact-placeholder.svg" | relURL }}" alt="{{ i18n "contact_image_alt" }}" />
+      </div>
+    </div>
+  </section>
+{{ end }}

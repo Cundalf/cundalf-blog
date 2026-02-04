@@ -1,0 +1,43 @@
+tiers:
+  - title:
+      es: Sketch coloreado
+      en: Colored sketch
+    price: "$40 - $70"
+    description:
+      es: Ideal para retratos rápidos, regalos y personajes secundarios.
+      en: Ideal for quick portraits, gifts, and secondary characters.
+    details:
+      - es: 1 personaje + fondo simple
+        en: 1 character + simple background
+      - es: Tiempo estimado 5-7 días
+        en: Estimated time 5-7 days
+      - es: 1 ronda de cambios
+        en: 1 revision round
+  - title:
+      es: Ilustración completa
+      en: Full illustration
+    price: "$120 - $220"
+    description:
+      es: Pieza final con texturas y atmósfera, lista para publicar.
+      en: Final piece with textures and atmosphere, ready to publish.
+    details:
+      - es: Hasta 2 personajes
+        en: Up to 2 characters
+      - es: Fondo narrativo
+        en: Narrative background
+      - es: 2 rondas de cambios
+        en: 2 revision rounds
+  - title:
+      es: Diseño de personaje
+      en: Character design
+    price: "$180 - $280"
+    description:
+      es: Sheet con vistas, expresiones y paleta para animación.
+      en: Sheet with views, expressions, and palette for animation.
+    details:
+      - es: Turnaround + accesorios
+        en: Turnaround + accessories
+      - es: Paleta y notas de estilo
+        en: Palette and style notes
+      - es: Entrega en alta resolución
+        en: High-resolution delivery

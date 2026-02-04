@@ -1,0 +1,25 @@
+items:
+  - image: images/gallery-1.svg
+    label:
+      es: Arte 01
+      en: Art 01
+  - image: images/gallery-2.svg
+    label:
+      es: Arte 02
+      en: Art 02
+  - image: images/gallery-3.svg
+    label:
+      es: Arte 03
+      en: Art 03
+  - image: images/gallery-4.svg
+    label:
+      es: Arte 04
+      en: Art 04
+  - image: images/gallery-5.svg
+    label:
+      es: Arte 05
+      en: Art 05
+  - image: images/gallery-6.svg
+    label:
+      es: Arte 06
+      en: Art 06
