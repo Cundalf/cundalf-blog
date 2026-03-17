@@ -1,0 +1,144 @@
+baseURL = "https://seedbyte.dev"
+title = "Seedbyte Dev"
+theme = "LoveIt"
+defaultContentLanguage = "es"
+languageCode = "es-ar"
+hasCJKLanguage = false
+
+[pagination]
+  pagerSize = 5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[menu]
+  [[menu.main]]
+    weight = 10
+    identifier = "home"
+    name = "Inicio"
+    pre = "<i class='fas fa-home fa-fw' aria-hidden='true'></i>"
+    url = "/"
+  [[menu.main]]
+    weight = 20
+    identifier = "posts"
+    name = "Posts"
+    pre = "<i class='fas fa-archive fa-fw' aria-hidden='true'></i>"
+    url = "/posts/"
+  [[menu.main]]
+    weight = 30
+    identifier = "categories"
+    name = "Categorías"
+    pre = "<i class='fas fa-th fa-fw' aria-hidden='true'></i>"
+    url = "/categories/"
+  [[menu.main]]
+    weight = 40
+    identifier = "tags"
+    name = "Etiquetas"
+    pre = "<i class='fas fa-tags fa-fw' aria-hidden='true'></i>"
+    url = "/tags/"
+  [[menu.main]]
+    weight = 50
+    identifier = "about"
+    name = "Información"
+    pre = "<i class='fas fa-user fa-fw' aria-hidden='true'></i>"
+    url = "/about/"
+
+[params]
+  defaultTheme = "auto"
+  dateFormat = "2006-01-02"
+  title = "Seedbyte Dev"
+  description = "Investigación, síntesis y aprendizaje sobre tecnología e IA."
+  
+  [params.author]
+    name = "Cundalf"
+    link = "https://agustincundari.com.ar"
+    email = "contacto@seedbyte.dev"
+    avatarURL = "img/avatar.jpg"
+
+  [params.header]
+    desktopMode = "fixed"
+    mobileMode = "auto"
+    [params.header.title]
+      name = "Seedbyte Dev"
+      pre = "<i class='fas fa-seedling' aria-hidden='true'></i>"
+      typeit = true
+
+  [params.footer]
+    enable = true
+    author = true
+    copyright = true
+    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+
+  [params.home]
+    [params.home.profile]
+      enable = true
+      avatarURL = "img/avatar.jpg"
+      title = "Seedbyte Dev"
+      subtitle = "Conocimiento que respira: Tecnología, IA y pensamiento crítico."
+      typeit = true
+      social = true
+      disclaimer = ""
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  [params.social]
+    GitHub = ""
+    Linkedin = ""
+    Twitter = ""
+    Instagram = ""
+    Facebook = ""
+    Telegram = ""
+    Medium = ""
+    Quora = ""
+    Reddit = ""
+    Discord = ""
+    Youtube = ""
+    Email = "contacto@seedbyte.dev"
+    RSS = true
+
+  [params.page]
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+    [params.page.code]
+      copy = true
+      maxShownLines = 50
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = true
+      Whatsapp = true
+      Telegram = true
+    [params.page.comment]
+      enable = false
+
+  [params.search]
+    enable = true
+    type = "lunr"
+    contentLength = 4000
+    placeholder = "Buscar posts..."
+    maxResultLength = 10
+    snippetLength = 30
+    highlightTag = "em"
+    absoluteURL = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    noClasses = false
+
+[permalinks]
+  post = "/:slug/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"

@@ -3,7 +3,8 @@ title: Otra vez... El DNS
 description: Todos hablan de esto, yo también quiero ser popular.
 slug: otra-vez-el-dns
 date: 2025-10-31 00:00:00+0000
-image: cover.jpeg
+featuredImage: cover.jpeg
+featuredImagePreview: cover.jpeg
 tags:
     - dns
 categories:

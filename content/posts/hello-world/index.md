@@ -3,7 +3,8 @@ title: "Cliché: ¡Hello World!"
 description: Volviendo al Blogging, ¿Cuanto durara esta temporada?
 slug: hello-world
 date: 2025-10-25 00:00:00+0000
-image: cover.jpg
+featuredImage: cover.jpg
+featuredImagePreview: cover.jpg
 categories:
     - irl
 ---

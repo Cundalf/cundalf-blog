@@ -3,7 +3,8 @@ title: Deja de llorar, usá docker
 description: Si estás leyendo esto, es porque necesitás aprender docker YA.
 slug: docker-deja-de-llorar
 date: 2025-12-11 00:00:00+0000
-image: cover.jpg
+featuredImage: cover.jpg
+featuredImagePreview: cover.jpg
 tags:
     - devops
     - tutorial

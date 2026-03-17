@@ -3,7 +3,8 @@ title: "Seedbyte Dev: volver con raíces nuevas"
 description: "Volví con un proyecto nuevo, un cuaderno de campo y muchas ganas de compartir."
 slug: seedbyte-dev
 date: 2026-11-27 00:00:00+0000
-image: cover.jpg
+featuredImage: cover.jpg
+featuredImagePreview: cover.jpg
 categories:
     - irl
 ---

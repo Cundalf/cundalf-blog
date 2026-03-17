@@ -4,7 +4,8 @@ title: Gitlab Runners, AWS Spot, Socotrocos
 description: Una de las cosas lindas que me toco hacer es que los runners de Gitlab utilicen instancias Spot, te cuento...
 slug: aws-spot-runners
 date: 2025-11-11 00:00:00+0000
-image: cover.jpg
+featuredImage: cover.jpg
+featuredImagePreview: cover.jpg
 tags:
     - devops
 categories:

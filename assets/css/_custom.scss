@@ -1,0 +1,517 @@
+/* 
+   Seedbyte Premium Custom Branding 
+   A sleek, modern green-themed design for Seedbyte Dev.
+*/
+
+:root {
+    /* Light Mode Palette */
+    --seed-primary: #1f6b2e;
+    --seed-primary-rgb: 31, 107, 46;
+    --seed-accent: #c7f26b;
+    --seed-bg: #f9fdf9;
+    --seed-card-bg: #ffffff;
+    --seed-text-main: #1a1a1a;
+    --seed-text-muted: #555555;
+    --seed-border: rgba(31, 107, 46, 0.1);
+    --seed-header-bg: rgba(251, 253, 249, 0.85);
+}
+
+[theme='dark'] {
+    /* Dark Mode Palette - Deep & Techy */
+    --seed-primary: #c7f26b;
+    --seed-primary-rgb: 199, 242, 107;
+    --seed-accent: #1f6b2e;
+    --seed-bg: #050d06; /* Deepest forest green-black */
+    --seed-card-bg: #0d1a0f;
+    --seed-text-main: #f0f7f0;
+    --seed-text-muted: #a0b0a0;
+    --seed-border: rgba(199, 242, 107, 0.15);
+    --seed-header-bg: rgba(5, 13, 6, 0.85);
+}
+
+/* Global Foundation */
+body {
+    background-color: var(--seed-bg) !important;
+    color: var(--seed-text-main) !important;
+    font-family: 'Inter', -apple-system, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[theme='dark'],
+[theme='dark'] body {
+    background-color: var(--seed-bg) !important;
+    color: var(--seed-text-main) !important;
+}
+
+.wrapper {
+    background-color: var(--seed-bg) !important;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--seed-primary) !important;
+    font-weight: 700;
+}
+
+.content h1, .content h2, .content h3 {
+    border-left: 4px solid var(--seed-primary);
+    padding-left: 1rem;
+    margin-top: 2.5rem !important;
+    margin-bottom: 1.25rem !important;
+}
+
+a {
+    color: var(--seed-primary) !important;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--seed-primary) !important;
+    filter: brightness(1.1);
+    text-decoration: none;
+}
+
+/* Fix for banners "disappearing" - ensure images don't get the filter if it breaks them */
+.featured-image-preview a:hover {
+    filter: none !important;
+}
+
+.header-mark {
+    color: var(--seed-primary) !important;
+    margin-right: 0.5rem;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+}
+
+.header-mark:hover {
+    opacity: 1;
+}
+
+/* Override the theme's pseudo-element for hashtags */
+.content h1 > .header-mark::before,
+.content h2 > .header-mark::before,
+.content h3 > .header-mark::before,
+.content h4 > .header-mark::before,
+.content h5 > .header-mark::before,
+.content h6 > .header-mark::before {
+    color: var(--seed-primary) !important;
+}
+
+/* Fix for banners "disappearing" on hover */
+.featured-image-preview:hover {
+    opacity: 1 !important;
+}
+
+.featured-image-preview:hover img {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+/* Ensure summary items don't hide their children on hover */
+.summary:hover .featured-image-preview {
+    opacity: 1 !important;
+}
+
+/* Header & Navigation */
+.header {
+    background-color: var(--seed-header-bg) !important;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border-bottom: 1px solid var(--seed-border) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* Fix for floating shadow/border when header is hidden on scroll */
+.header.hide, 
+.header.up,
+#header-mobile.hide,
+#header-mobile.up,
+#header-mobile.animate__fadeOutUp,
+.header.mobile.animate__fadeOutUp,
+.header.hide .search-dropdown.mobile,
+.header.up .search-dropdown.mobile,
+#header-mobile.hide .search-dropdown.mobile,
+#header-mobile.up .search-dropdown.mobile,
+#header-mobile.animate__fadeOutUp ~ .search-dropdown.mobile,
+.header.mobile.animate__fadeOutUp ~ .search-dropdown.mobile {
+    box-shadow: none !important;
+    border: none !important;
+    border-bottom-color: transparent !important;
+    background: transparent !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+
+.header-title a {
+    color: var(--seed-primary) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.5px;
+}
+
+.menu-item {
+    color: var(--seed-text-main) !important;
+    font-weight: 500;
+}
+
+.menu-item:hover, .menu-item.active {
+    color: var(--seed-primary) !important;
+}
+
+/* Cards & Summary Items */
+/* Post Summaries (Cards on Home) - Base Desktop Styles */
+article.summary {
+    background: var(--seed-card-bg) !important;
+    border: 1px solid var(--seed-border) !important;
+    border-radius: 24px;
+    padding: 3rem !important; 
+    margin-bottom: 5rem !important;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+}
+
+article.summary:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px -15px rgba(var(--seed-primary-rgb), 0.2);
+    border-color: var(--seed-primary) !important;
+}
+
+/* Flush Banner Image */
+article.summary .featured-image-preview {
+    margin: -3rem -3rem 2.5rem -3rem !important;
+    border-radius: 22px 22px 0 0;
+    height: 380px;
+}
+
+article.summary .featured-image-preview img {
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+/* Post Titles */
+article.summary .single-title {
+    margin: 0.5rem 0 1.25rem 0 !important;
+    font-size: 2rem !important;
+    font-weight: 800;
+}
+
+/* Post Meta */
+article.summary .post-meta {
+    margin-bottom: 2.5rem !important;
+    color: var(--seed-text-muted) !important;
+    font-size: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--seed-border);
+}
+
+/* Excerpt Content */
+article.summary .content {
+    line-height: 1.8 !important;
+    margin-bottom: 3rem !important;
+    color: var(--seed-text-main) !important;
+    font-size: 1.1rem;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+    /* Ensure the main container doesn't squeeze the home page */
+    .container, .page.home {
+        width: 100% !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        box-sizing: border-box !important;
+    }
+
+    article.summary {
+        display: block !important; /* Flex was likely causing weird shrinking */
+        width: 100% !important;
+        padding: 1rem !important;
+        margin-bottom: 2rem !important;
+        border-radius: 12px;
+        box-sizing: border-box !important;
+    }
+
+    article.summary .featured-image-preview {
+        margin: -1rem -1rem 1.5rem -1rem !important;
+        height: 180px;
+        width: calc(100% + 2rem) !important;
+        border-radius: 12px 12px 0 0;
+    }
+
+    article.summary .single-title {
+        font-size: 1.35rem !important;
+        margin: 0 0 1rem 0 !important;
+        line-height: 1.25 !important;
+    }
+
+    article.summary .post-meta {
+        display: block !important; /* Stack them naturally */
+        margin-bottom: 1.5rem !important;
+        padding-bottom: 0.75rem !important;
+        border-bottom: 1px solid var(--seed-border);
+    }
+    
+    article.summary .post-meta span {
+        display: inline-block !important;
+        margin-bottom: 0.25rem !important;
+        margin-right: 0.5rem !important;
+        font-size: 0.85rem !important;
+    }
+
+    article.summary .content {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    /* Single Post Mobile Fixes */
+    .single.page {
+        padding: 1.25rem !important;
+        border-radius: 12px;
+    }
+
+    .single.page .single-title {
+        font-size: 1.6rem !important;
+    }
+}
+
+
+/* Full Post Page - Consistency with spacing */
+.single.page {
+    background: var(--seed-card-bg) !important;
+    border: 1px solid var(--seed-border) !important;
+    border-radius: 20px !important;
+    padding: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.single.page .single-title {
+    margin: 1.5rem 0 2rem 0 !important;
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+}
+
+.single.page .post-meta {
+    margin-bottom: 4rem !important;
+    padding-bottom: 1.5rem !important;
+    border-bottom: 2px solid var(--seed-border) !important;
+}
+
+.single.page .content {
+    line-height: 2 !important;
+    font-size: 1.15rem !important;
+}
+
+.post-title a {
+    color: var(--seed-text-main) !important;
+    text-decoration: none !important;
+}
+
+.post-title a:hover {
+    color: var(--seed-primary) !important;
+}
+
+/* Content Elements */
+blockquote {
+    border-left: 4px solid var(--seed-primary) !important;
+    background: rgba(var(--seed-primary-rgb), 0.05) !important;
+    color: var(--seed-text-muted) !important;
+    border-radius: 0 8px 8px 0;
+    padding: 1.5rem 2rem !important;
+    margin: 2rem 0 !important;
+    font-style: italic;
+}
+
+code {
+    background-color: rgba(var(--seed-primary-rgb), 0.1) !important;
+    color: var(--seed-primary) !important;
+    padding: 0.2rem 0.4rem !important;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+.chroma {
+    background: var(--seed-card-bg) !important;
+    border: 1px solid var(--seed-border) !important;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* UI Components */
+.search-wrapper .search-input {
+    background: var(--seed-card-bg) !important;
+    border: 1px solid var(--seed-border) !important;
+    color: var(--seed-text-main) !important;
+    border-radius: 20px;
+}
+
+.search-wrapper .search-input:focus {
+    border-color: var(--seed-primary) !important;
+    box-shadow: 0 0 0 3px rgba(var(--seed-primary-rgb), 0.1);
+}
+
+.search-dropdown {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.search-dropdown .dropdown-menu {
+    background-color: var(--seed-card-bg) !important;
+    border: 1px solid var(--seed-border) !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    margin-top: 0.5rem;
+}
+
+.pagination .page.active a {
+    background-color: var(--seed-primary) !important;
+    border-color: var(--seed-primary) !important;
+    color: var(--seed-bg) !important;
+}
+
+.post-tags a {
+    background-color: rgba(var(--seed-primary-rgb), 0.08) !important;
+    color: var(--seed-primary) !important;
+    border-radius: 20px;
+    padding: 0.25rem 1rem;
+    font-weight: 500;
+}
+
+.post-tags a:hover {
+    background-color: var(--seed-primary) !important;
+    color: var(--seed-bg) !important;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--seed-bg) !important;
+    border-top: 1px solid var(--seed-border) !important;
+    color: var(--seed-text-muted) !important;
+    padding-bottom: 5rem !important;
+}
+
+/* Fix for LoveIt dark mode specific classes - covering all major containers */
+[theme='dark'],
+[theme='dark'] body,
+[theme='dark'] .wrapper,
+[theme='dark'] .main,
+[theme='dark'] .header,
+[theme='dark'] .footer,
+[theme='dark'] .container,
+[theme='dark'] article.page,
+[theme='dark'] .search-dropdown {
+    background-color: var(--seed-bg) !important;
+}
+
+[theme='dark'] .post-footer,
+[theme='dark'] .post-info-more,
+[theme='dark'] .post-info-comment,
+[theme='dark'] .comment,
+[theme='dark'] .header-wrapper,
+[theme='dark'] .footer-container {
+    border-color: var(--seed-border) !important;
+}
+
+/* Specific content fixes for dark mode */
+[theme='dark'] .content code {
+    background-color: rgba(var(--seed-primary-rgb), 0.15) !important;
+    color: var(--seed-primary) !important;
+}
+
+[theme='dark'] .content blockquote {
+    background: rgba(var(--seed-primary-rgb), 0.08) !important;
+    border-left-color: var(--seed-primary) !important;
+}
+
+#back-to-top {
+    background: var(--seed-primary) !important;
+    color: var(--seed-bg) !important;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(var(--seed-primary-rgb), 0.3);
+}
+
+/* Home Profile */
+.home-profile .home-avatar img {
+    border: 4px solid var(--seed-primary);
+    box-shadow: 0 0 25px rgba(var(--seed-primary-rgb), 0.25);
+    transition: transform 0.5s ease;
+}
+
+.home-profile .home-avatar img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.home-profile .home-subtitle {
+    color: var(--seed-text-muted) !important;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Animations and Premium Micro-interactions */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.summary {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Table of Contents */
+.toc {
+    background: var(--seed-card-bg) !important;
+    border: 1px solid var(--seed-border) !important;
+    border-radius: 12px;
+    padding: 1rem !important;
+}
+
+.toc-title {
+    color: var(--seed-primary) !important;
+    font-weight: 700;
+}
+
+.toc-link.active {
+    color: var(--seed-primary) !important;
+    border-left: 2px solid var(--seed-primary) !important;
+}
+
+/* Code Copy Button */
+.code-block-wrapper {
+    position: relative;
+}
+
+.copy-code-button {
+    background: var(--seed-primary) !important;
+    color: var(--seed-bg) !important;
+    border-radius: 4px;
+    border: none;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.copy-code-button:hover {
+    opacity: 1;
+}
+
+/* Search results highlight */
+.search-highlight {
+    background-color: var(--seed-primary) !important;
+    color: var(--seed-bg) !important;
+    padding: 0 2px;
+    border-radius: 2px;
+}
