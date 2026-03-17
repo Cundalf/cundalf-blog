@@ -88,14 +88,14 @@ hasCJKLanguage = false
     Twitter = ""
     Instagram = ""
     Facebook = ""
-    Telegram = ""
+    Telegram = "seedbyte_dev"
     Medium = ""
     Quora = ""
     Reddit = ""
     Discord = ""
     Youtube = ""
-    Email = "contacto@seedbyte.dev"
-    RSS = true
+    Email = "blog@seedbyte.dev"
+    RSS = false
 
   [params.page]
     [params.page.toc]
